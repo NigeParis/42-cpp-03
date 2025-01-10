@@ -6,16 +6,41 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/10 14:35:36 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/10 14:43:59 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/ClapTrap.hpp"
 
+int displayZeroIfEmpty(int nbr) {
+
+    if (nbr < 0)
+        return (0);
+    return nbr;
+}
+
+
+void displayAllVariables(ClapTrap &claptrap) {
+
+    int energy = displayZeroIfEmpty(claptrap.getEnergyPoints());
+    int hitpoints = displayZeroIfEmpty(claptrap.getHitPoints());
+
+    if (claptrap.getName() == "default")
+        std::cout << GREEN;
+    if (claptrap.getName() != "default")
+        std::cout << LIGHTBLUE;
+    std::cout << "Name: " << claptrap.getName();
+    std::cout << " | HitPoints: " << hitpoints;
+    std::cout << " | EnergyPoints: " << energy;
+    std::cout << " | AttackDamage: " << claptrap.getAttackDamage() << std::endl;
+    std::cout << RESET;
+}
+
+
 int main( void ) {
 
-    ClapTrap claptrap("Robinso");
     ClapTrap noname;
+    ClapTrap claptrap("Robinso");
     
     displayAllVariables(claptrap);
     displayAllVariables(noname);

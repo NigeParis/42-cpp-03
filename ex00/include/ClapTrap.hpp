@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 15:41:44 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/10 14:26:25 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/10 14:40:16 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,5 @@ class ClapTrap {
 
 void hitRepair(ClapTrap &claptrap, unsigned int amount);
 void thugAttack(ClapTrap &thug, ClapTrap &victim);
-void displayAllVariables(ClapTrap &claptrap);
-int displayZeroIfEmpty(int nbr);
 
 #endif
