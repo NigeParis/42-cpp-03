@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 15:42:59 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/10 14:25:21 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/10 14:36:44 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,10 +117,7 @@ void ClapTrap::attack(const std::string& target) {
 
 void ClapTrap::beRepaired(unsigned int amount) {
   
-    if (this->name_ != "default")
-        std::cout << YELLOW;
-    if (this->name_ == "default")
-        std::cout << GREEN;
+    std::cout << YELLOW;
     if (amount > MAXAMOUNT) {
         
         std::cout << GREY;
