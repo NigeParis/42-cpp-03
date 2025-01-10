@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/10 16:11:40 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/10 17:39:38 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,21 @@ void displayAllVariables(ClapTrap &claptrap) {
 
 int main( void ) {
 
-    ScavTrap claptrap("Robinso");
-    // ScavTrap noname;
+    ScavTrap claptrap("nigel");
+    ScavTrap noname;
     // ScavTrap test;
     
     displayAllVariables(claptrap);
     
-    // thugAttack(claptrap, noname);
-    
+    ScavthugAttack(claptrap, noname);
+    thugAttack(noname, claptrap);
+    claptrap.guardGate();
     // std::cout << test.getName();
    
     hitRepair(claptrap, 1);
 
     displayAllVariables(claptrap);
+    displayAllVariables(noname);
     
     return (0);
 }
