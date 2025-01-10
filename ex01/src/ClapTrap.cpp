@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 15:42:59 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/10 16:14:02 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/10 17:49:32 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ ClapTrap &ClapTrap::operator=(ClapTrap& claptrap) {
 ClapTrap::~ClapTrap(void) {
     
     std::cout << BLUE;
-    std::cout << "ClapTrap Destructor is called" << std::endl;
+    std::cout << "ClapTrap " << this->name_ << " Destructor is called" << std::endl;
     std::cout << RESET;
 };
 

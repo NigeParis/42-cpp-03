@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 14:55:23 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/10 17:40:35 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/10 17:51:57 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,20 @@
 
 //default constructor
 ScavTrap::ScavTrap(void) {
+
     std::cout << "ScavTrap default constructor is called" << std::endl;
     this->hitpoints_ = 100;
     this->energy_ = 50;
     this->damage_ = 20;
-    
 };
 
 //named constructor
-ScavTrap::ScavTrap(std::string name){
-    std::cout << "ScavTrap named constructor is called" << std::endl;
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name){
     
-    this->name_ = name;
+    std::cout << "ScavTrap named constructor is called" << std::endl;
     this->hitpoints_ = 100;
     this->energy_ = 50;
-    this->damage_ = 20;
-  
-    
+    this->damage_ = 20;  
 };
 
 
@@ -46,7 +43,7 @@ ScavTrap &ScavTrap::operator=(ScavTrap& scavtrap) {
 //destructor
 ScavTrap::~ScavTrap(void) {
 
-    std::cout << "ScavTrap Destructor is called" << std::endl;
+    std::cout << "ScavTrap " << this->name_ << " Destructor is called" << std::endl;
 };
 
 void ScavTrap::guardGate(void) {
