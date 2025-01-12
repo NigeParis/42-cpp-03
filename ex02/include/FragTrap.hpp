@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 12:29:22 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/12 14:23:14 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/12 15:32:34 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class FragTrap : public ClapTrap {
     public: 
             FragTrap(void);
             FragTrap(std::string name);
+            FragTrap(const FragTrap &fragtrap);
             FragTrap &operator=(FragTrap& fragtrap);
             ~FragTrap(void);
             void attack(const std::string& target);

@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 12:28:51 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/12 14:44:18 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/12 15:49:11 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,41 @@
 FragTrap::FragTrap(void) : ClapTrap() {
     
     std::cout << "FragTrap default constructor is called" << std::endl;
-    hitpoints_ = 100;
-    energy_ = 100;
-    damage_ = 30;
+    this->hitpoints_ = 100;
+    this->energy_ = 100;
+    this->damage_ = 30;
 };
 
 //named constructor
 FragTrap::FragTrap(std::string name) : ClapTrap(name) {
 
     std::cout << "FragTrap named constructor is called" << std::endl;
-    hitpoints_ = 100;
-    energy_ = 100;
-    damage_ = 30;
+    this->hitpoints_ = 100;
+    this->energy_ = 100;
+    this->damage_ = 30;
+};
+
+// copy constructor 
+FragTrap:: FragTrap(const FragTrap &fragtrap) {
+
+    std::cout << "FragTrap copy constructor is called" << std::endl;
+    this->name_ = fragtrap.name_;
+    this->energy_ = fragtrap.energy_;
+    this->hitpoints_ = fragtrap.hitpoints_;
+    this->damage_ = fragtrap.damage_; 
 };
 
 // copy operator assignement
 FragTrap &FragTrap::operator=(FragTrap &fragtrap) {
 
-    (void)fragtrap;
+    std::cout << "FragTrap copy assignement operator is called" << std::endl;
+    if (this != &fragtrap) {
+
+        this->name_ = fragtrap.name_;
+        this->energy_ = fragtrap.energy_;
+        this->hitpoints_ = fragtrap.hitpoints_;
+        this->damage_ = fragtrap.damage_;     
+    }
     return (*this);
 };
 
@@ -43,14 +60,13 @@ FragTrap::~FragTrap(void) {
     std::cout << "FragTrap " << this->name_ << " Destructor is called" << std::endl;
 };
 
+
+
 void FragTrap::highFivesGuys(void) {
 
     std::cout << "FragTrap " << this->name_ << " Give me five guys ?" << std::endl;
     
 };
-
-
-
 
 void FragTrap::attack(const std::string& target) {
  
