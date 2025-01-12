@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/12 14:49:19 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/12 14:50:47 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ int main( void ) {
     FragTrap fragname("FragName");
     ScavTrap claptrap("nigel");
     ScavTrap noname;
-    // ScavTrap test;
     
     displayAllVariables(claptrap);
     displayAllVariables(fragname);
@@ -55,7 +54,6 @@ int main( void ) {
     claptrap.guardGate();
     fragname.highFivesGuys();
     fragnoname.highFivesGuys();
-    // std::cout << test.getName();
    
     hitRepair(claptrap, 1);
 
