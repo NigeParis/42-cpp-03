@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 17:42:22 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 18:39:59 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ int main( void ) {
     diaThugAttack(diatrap, newtrap, newtrap.getDiaName());
     displayAllVariables(diatrap);
     displayAllVariables(newtrap);
-    
     
     return (0);
 }

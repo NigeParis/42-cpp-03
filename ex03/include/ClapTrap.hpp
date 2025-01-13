@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 15:41:44 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 11:02:21 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 18:33:50 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class ClapTrap {
         ClapTrap(std::string name);
         ClapTrap(ClapTrap &claptrap);
         ClapTrap &operator=(ClapTrap &claptrap);
-        ~ClapTrap(void);
+        virtual ~ClapTrap(void);
 
         std::string getName(void) const;
         int getHitPoints(void) const;
