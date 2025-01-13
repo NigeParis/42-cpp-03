@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 13:06:05 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 17:48:59 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,12 @@ int main( void ) {
     
     displayAllVariables(claptrap);
     
+    ScavthugAttack(claptrap, noname);
+    ScavthugAttack(claptrap, noname);
+    ScavthugAttack(claptrap, noname);
+    ScavthugAttack(claptrap, noname);
+    ScavthugAttack(claptrap, noname);
+    ScavthugAttack(claptrap, noname);
     ScavthugAttack(claptrap, noname);
     thugAttack(noname, claptrap);
     claptrap.guardGate();

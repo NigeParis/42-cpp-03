@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/10 14:43:59 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 18:08:34 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void displayAllVariables(ClapTrap &claptrap) {
 int main( void ) {
 
     ClapTrap noname;
+    ClapTrap copynoname;
     ClapTrap claptrap("Robinso");
     
     displayAllVariables(claptrap);
@@ -54,9 +55,23 @@ int main( void ) {
     thugAttack(claptrap, noname);
     thugAttack(claptrap, noname);
     thugAttack(claptrap, noname);
-    
     thugAttack(noname, claptrap);
-   
+    thugAttack(claptrap, noname);
+    thugAttack(claptrap, noname);
+    thugAttack(claptrap, noname);
+    thugAttack(claptrap, noname);
+    thugAttack(claptrap, noname);
+    thugAttack(claptrap, noname);
+    thugAttack(claptrap, noname);   
+    thugAttack(claptrap, noname);
+    thugAttack(claptrap, noname);
+    thugAttack(claptrap, noname);
+    thugAttack(claptrap, noname);
+    thugAttack(claptrap, noname);
+    thugAttack(claptrap, noname);
+    thugAttack(claptrap, noname);
+
+    copynoname = noname;
     hitRepair(claptrap, 50);
     hitRepair(noname, -50);
 
@@ -71,6 +86,7 @@ int main( void ) {
     displayAllVariables(noname);
     hitRepair(noname, 1);
     displayAllVariables(noname);
+    displayAllVariables(copynoname);
     
     return (0);
 }

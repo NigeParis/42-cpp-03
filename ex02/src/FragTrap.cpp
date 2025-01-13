@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 12:28:51 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/12 15:49:11 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 18:18:44 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ FragTrap:: FragTrap(const FragTrap &fragtrap) {
 };
 
 // copy operator assignement
-FragTrap &FragTrap::operator=(FragTrap &fragtrap) {
+FragTrap &FragTrap::operator=(const FragTrap &fragtrap) {
 
     std::cout << "FragTrap copy assignement operator is called" << std::endl;
     if (this != &fragtrap) {
@@ -70,8 +70,7 @@ void FragTrap::highFivesGuys(void) {
 
 void FragTrap::attack(const std::string& target) {
  
-    if (this->name_ == "default")
-        std::cout << RED;
+    std::cout << RED;
 
     if (this->energy_ >= LIMIT && this->hitpoints_ >= LIMIT) {
         std::cout << "FragTrap " << this->name_ << " attacks " << target;
@@ -96,7 +95,7 @@ void FragTrap::attack(const std::string& target) {
 };
 
 
-
+// call functions for main
 void FragthugAttack(FragTrap &thug, FragTrap &victim) {
 
     thug.attack(victim.getName());

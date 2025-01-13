@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 15:41:44 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/10 14:40:16 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 18:06:08 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class ClapTrap {
         
         ClapTrap(void);
         ClapTrap(std::string name);
+        ClapTrap(ClapTrap &claptrap);
         ClapTrap &operator=(ClapTrap &claptrap);
         ~ClapTrap(void);
 

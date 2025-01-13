@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 10:06:02 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 16:38:51 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 18:15:24 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name") {
     std::cout << "DiamondTrap named constructor is called" << std::endl;
     this->name_ = name;
     this->hitpoints_ = 100;
-    this->energy_ = 1;
+    this->energy_ = 50;
     this->damage_ = 30;    
 };
 
@@ -69,8 +69,8 @@ DiamondTrap::~DiamondTrap(void) {
 
 void DiamondTrap::whoAmI(void) {
 
-   std::cout << "DiamondTrap name: " << name_ << std::endl;
-   std::cout << "ClapTrap    name: " << ClapTrap::name_ << std::endl;
+   std::cout << "DiamondTrap name: " << name_ << " whoAmI()" <<std::endl;
+   std::cout << "ClapTrap    name: " << ClapTrap::name_ << " whoAmI()" << std::endl;
     
 };
 
@@ -102,11 +102,10 @@ std::string DiamondTrap::getDiaName(void) {
     
 };
 
+// call functions for main
 void diaThugAttack(DiamondTrap &thug, DiamondTrap &victim, std::string victimname) {
 
     thug.attack(victimname);
     if ((thug.getHitPoints() > -1) && (thug.getEnergyPoints() > -1))
         victim.takeDamage(thug.getAttackDamage());
-
 };
-

@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 12:28:51 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 12:51:06 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 18:15:34 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ void FragTrap::attack(const std::string& target) {
 };
 
 
-
+// call functions for main
 void FragthugAttack(FragTrap &thug, FragTrap &victim) {
 
     thug.attack(victim.getName());

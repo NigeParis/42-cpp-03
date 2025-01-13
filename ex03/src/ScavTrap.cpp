@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 14:55:23 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 15:47:08 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 18:15:47 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,7 @@ void ScavTrap::guardGate(void) {
 void ScavTrap::attack(const std::string& target) {
  
     std::cout << RED;
-
-
+    
     if (this->energy_ >= LIMIT && this->hitpoints_ >= LIMIT) {
         std::cout << "ScavTrap " << this->name_ << " attacks " << target;
         this->energy_ = this->energy_ - LIMIT;
@@ -94,10 +93,10 @@ void ScavTrap::attack(const std::string& target) {
     std::cout << RESET; 
 };
 
+// call functions for main
 void ScavthugAttack(ScavTrap &thug, ScavTrap &victim) {
 
     thug.attack(victim.getName());
     if ((thug.getHitPoints() > -1) && (thug.getEnergyPoints() > -1))
-        victim.takeDamage(thug.getAttackDamage());
-    
+        victim.takeDamage(thug.getAttackDamage());    
 }

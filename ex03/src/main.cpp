@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 16:38:43 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 17:42:22 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,26 +45,37 @@ int main( void ) {
 
     DiamondTrap diatrap("diaName");
     DiamondTrap newtrap;
-    // DiamondTrap equalstrap("test");
 
-    // displayAllVariables(equalstrap);
     displayAllVariables(diatrap);
     displayAllVariables(newtrap);
 
 
 
-    diaThugAttack(diatrap, newtrap, "newtrap");
-    diaThugAttack(diatrap, newtrap, "newtrap");
-    diaThugAttack(diatrap, newtrap, "newtrap");
+    diaThugAttack(diatrap, newtrap, newtrap.getDiaName());
+    diaThugAttack(diatrap, newtrap, newtrap.getDiaName());
+    diaThugAttack(diatrap, newtrap, newtrap.getDiaName());
 
    
     
     displayAllVariables(diatrap);
     displayAllVariables(newtrap);
+    diaThugAttack(newtrap, diatrap, diatrap.getDiaName());
+    diaThugAttack(diatrap, newtrap, newtrap.getDiaName());
+    diaThugAttack(diatrap, newtrap, newtrap.getDiaName());
+    displayAllVariables(diatrap);
+    displayAllVariables(newtrap);
+    diaThugAttack(newtrap, diatrap, diatrap.getDiaName());
 
     newtrap.beRepaired(100);
     displayAllVariables(diatrap);
     displayAllVariables(newtrap);
     diatrap.whoAmI();
+
+    newtrap = diatrap;
+    diaThugAttack(diatrap, newtrap, newtrap.getDiaName());
+    displayAllVariables(diatrap);
+    displayAllVariables(newtrap);
+    
+    
     return (0);
 }

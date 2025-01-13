@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 15:42:59 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 16:18:58 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 18:15:13 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,18 +91,21 @@ int ClapTrap::getAttackDamage(void) const {
 };
 
 
-
-
 void ClapTrap::takeDamage(unsigned int amount) {
     
-    if (this->name_ != "default")
-        std::cout << RED;
-    std::cout << ", causing " << amount << " points of damage!" << std::endl;
-    this->hitpoints_ = this->hitpoints_ - amount;
-    if (this->hitpoints_ < 0)
-        this->hitpoints_ = 0;
+    std::cout << RED;
+    int negatives = this->hitpoints_ - amount;
+    if (negatives > 0)
+        negatives = 0;
+    if (this->hitpoints_ > 0) {
+        std::cout << ", causing " << (amount - (negatives * -1)) << " points of damage!" << std::endl;
+        this->hitpoints_ = this->hitpoints_ - amount;
+        if (this->hitpoints_ < 0)
+            this->hitpoints_ = 0;
+    }
+    else
+        std::cout << ", causing 0 points of damage!" <<std::endl;
     std::cout << RESET;
-
 };
 
 // actions
@@ -162,17 +165,15 @@ void ClapTrap::beRepaired(unsigned int amount) {
     std::cout << RESET;  
 };
 
-
+// call functions for main
 void thugAttack(ClapTrap &thug, ClapTrap &victim) {
 
     thug.attack(victim.getName());
     if ((thug.getHitPoints() > -1) && (thug.getEnergyPoints() > -1))
-        victim.takeDamage(thug.getAttackDamage());
-    
+        victim.takeDamage(thug.getAttackDamage());    
 }
 
 void hitRepair(ClapTrap &claptrap, unsigned int amount) {
 
     claptrap.beRepaired(amount); 
 }
-
