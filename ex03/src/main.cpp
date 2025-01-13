@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 12:52:42 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 16:38:43 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,17 @@ int displayZeroIfEmpty(int nbr) {
 }
 
 
-void displayAllVariables(ClapTrap &claptrap) {
+void displayAllVariables(DiamondTrap &claptrap) {
 
     int energy = displayZeroIfEmpty(claptrap.getEnergyPoints());
-    int hitpoints = displayZeroIfEmpty(claptrap.getHitPoints());
+    int hitpoints = claptrap.getHitPoints();
+    // int hitpoints = displayZeroIfEmpty(claptrap.getHitPoints());
 
-    if (claptrap.getName() == "default")
+    if (claptrap.getDiaName() == "default")
         std::cout << GREEN;
-    if (claptrap.getName() != "default")
+    if (claptrap.getDiaName() != "default")
         std::cout << LIGHTBLUE;
-    std::cout << "Name: " << claptrap.getName();
+    std::cout << "Name: " << claptrap.getDiaName();
     std::cout << " | HitPoints: " << hitpoints;
     std::cout << " | EnergyPoints: " << energy;
     std::cout << " | AttackDamage: " << claptrap.getAttackDamage() << std::endl;
@@ -38,14 +39,32 @@ void displayAllVariables(ClapTrap &claptrap) {
 }
 
 
+
+
 int main( void ) {
 
-    DiamondTrap diatrap("diatrap");
+    DiamondTrap diatrap("diaName");
     DiamondTrap newtrap;
+    // DiamondTrap equalstrap("test");
 
-    newtrap = diatrap;
-
+    // displayAllVariables(equalstrap);
     displayAllVariables(diatrap);
     displayAllVariables(newtrap);
+
+
+
+    diaThugAttack(diatrap, newtrap, "newtrap");
+    diaThugAttack(diatrap, newtrap, "newtrap");
+    diaThugAttack(diatrap, newtrap, "newtrap");
+
+   
+    
+    displayAllVariables(diatrap);
+    displayAllVariables(newtrap);
+
+    newtrap.beRepaired(100);
+    displayAllVariables(diatrap);
+    displayAllVariables(newtrap);
+    diatrap.whoAmI();
     return (0);
 }

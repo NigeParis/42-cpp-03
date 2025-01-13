@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 14:55:23 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 09:31:32 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 15:47:08 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,8 @@ void ScavTrap::guardGate(void) {
 
 void ScavTrap::attack(const std::string& target) {
  
-    if (this->name_ == "default")
-        std::cout << RED;
+    std::cout << RED;
+
 
     if (this->energy_ >= LIMIT && this->hitpoints_ >= LIMIT) {
         std::cout << "ScavTrap " << this->name_ << " attacks " << target;

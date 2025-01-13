@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 14:55:23 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/10 17:51:57 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 15:27:59 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ void ScavTrap::attack(const std::string& target) {
             this->hitpoints_ = -1;
         }
     }  
+   
     std::cout << RESET; 
 };
 
@@ -84,7 +85,6 @@ void ScavTrap::attack(const std::string& target) {
 void ScavthugAttack(ScavTrap &thug, ScavTrap &victim) {
 
     thug.attack(victim.getName());
-    if ((thug.getHitPoints() > -1) && (thug.getEnergyPoints() > -1))
+     if ((thug.getHitPoints() > -1) && (thug.getEnergyPoints() > -1))
         victim.takeDamage(thug.getAttackDamage());
-    
 }
