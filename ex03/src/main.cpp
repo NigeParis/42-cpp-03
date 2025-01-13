@@ -6,11 +6,12 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 13:06:05 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 12:52:42 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/ScavTrap.hpp"
+#include "./include/DiamondTrap.hpp"
+
 
 int displayZeroIfEmpty(int nbr) {
 
@@ -39,19 +40,12 @@ void displayAllVariables(ClapTrap &claptrap) {
 
 int main( void ) {
 
-    ScavTrap claptrap("nigel");
-    ScavTrap noname;
-    
-    displayAllVariables(claptrap);
-    
-    ScavthugAttack(claptrap, noname);
-    thugAttack(noname, claptrap);
-    claptrap.guardGate();
-   
-    hitRepair(claptrap, 1);
+    DiamondTrap diatrap("diatrap");
+    DiamondTrap newtrap;
 
-    displayAllVariables(claptrap);
-    displayAllVariables(noname);
-    
+    newtrap = diatrap;
+
+    displayAllVariables(diatrap);
+    displayAllVariables(newtrap);
     return (0);
 }
