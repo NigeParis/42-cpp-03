@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/12 15:50:41 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 09:38:08 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,12 @@ int main( void ) {
 
     FragTrap fragnoname;
     FragTrap fragname("FragName");
-    FragTrap newfrag = fragname;
+    FragTrap tocopyfrag("NewFrag");
+    FragTrap newfrag;
     ScavTrap claptrap("nigel");
     ScavTrap noname;
 
-    fragnoname = fragname;
+    newfrag = tocopyfrag;
     
     displayAllVariables(claptrap);
     displayAllVariables(fragname);
@@ -64,6 +65,7 @@ int main( void ) {
     displayAllVariables(noname);
     displayAllVariables(fragname);
     displayAllVariables(fragnoname);
+    displayAllVariables(newfrag);
     
     return (0);
 }

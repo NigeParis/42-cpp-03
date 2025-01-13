@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 15:42:59 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/10 17:49:32 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/13 09:50:09 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,27 @@ ClapTrap::ClapTrap(std::string name) {
     this->damage_ = 0;
 };
 
+// copy constructor
+ClapTrap::ClapTrap(ClapTrap &claptrap) {
+
+    std::cout << "ClapTrap copy constructor is called" << std::endl;
+        this->name_ = claptrap.getName();
+        this->energy_ = claptrap.getEnergyPoints();
+        this->hitpoints_ = claptrap.getHitPoints();
+        this->damage_ = claptrap.getAttackDamage();
+};
+
+
 // copy assignement operator
 ClapTrap &ClapTrap::operator=(ClapTrap& claptrap) {
 
-    this->name_ = claptrap.getName();    
+    if (this != &claptrap) {
+        std::cout << "ClapTrap copy assignement operator is called" << std::endl;
+        this->name_ = claptrap.getName();
+        this->energy_ = claptrap.getEnergyPoints();
+        this->hitpoints_ = claptrap.getHitPoints();
+        this->damage_ = claptrap.getAttackDamage();
+    }
     return (*this);
 };
 
