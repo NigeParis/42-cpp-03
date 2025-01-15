@@ -51,6 +51,25 @@ public:
 ## Exercise 01: Serena, my love!
 Time to introduce a new family member! Create a derived robot named `ScavTrap` that inherits from `ClapTrap`. Its constructors, destructor, and `attack()` will have their own unique flair to showcase individuality.
 
+###Example:
+```cpp
+class ScavTrap : public ClapTrap {
+public:
+    ScavTrap(std::string n) : ClapTrap(n) {
+        std::cout << "ScavTrap " << name << " constructed." << std::endl;
+    }
+    ~ScavTrap() {
+        std::cout << "ScavTrap " << name << " destroyed." << std::endl;
+    }
+
+    void attack(const std::string &target) {
+        std::cout << "ScavTrap " << name << " fiercely attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
+    }
+};
+
+```
+
+
 ### Key Points to Remember:
 - Ensure `ScavTrap` inherits `ClapTrap`'s constructors and destructor.
 - Override `attack()` to print distinct and specific messages.
