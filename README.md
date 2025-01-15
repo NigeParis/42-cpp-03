@@ -115,8 +115,7 @@ Get ready for the ultimate challenge: creating a `ClapTrap` that's half `FragTra
 ### Example:
 ```cpp
 class DiamondTrap : public FragTrap, public ScavTrap {
-private:
-    std::string diamondName;
+
 public:
     DiamondTrap(std::string n) : ClapTrap(n), FragTrap(n), ScavTrap(n), diamondName(n) {
         std::cout << "DiamondTrap " << diamondName << " constructed." << std::endl;
@@ -132,6 +131,9 @@ public:
     void attack(const std::string &target) {
         FragTrap::attack(target);
     }
+
+private :
+    std::string name_;
 };
 ```
 
