@@ -78,6 +78,24 @@ public:
 ## Exercise 02: Repetitive work
 Next up, expand the `ClapTrap` lineage with the `FragTrap` class. This class will inherit from `ClapTrap` and bring its own unique behaviors to the table.
 
+### Example:
+```cpp
+
+class FragTrap : public ClapTrap {
+public:
+    FragTrap(std::string n) : ClapTrap(n) {
+        std::cout << "FragTrap " << name << " constructed." << std::endl;
+    }
+    ~FragTrap() {
+        std::cout << "FragTrap " << name << " destroyed." << std::endl;
+    }
+
+    void attack(const std::string &target) {
+        std::cout << "FragTrap " << name << " powerfully attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
+    }
+};
+```
+
 ### Key Points to Remember:
 - Implement `FragTrap` with distinctive behavior in its methods.
 - Strengthen the inheritance structure.
