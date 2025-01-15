@@ -8,7 +8,7 @@ SRCS=$(addprefix $(SRC_DIR), $(SRC))
 OBJ=$(SRC:.cpp=.o)
 OBJS=$(addprefix $(OBJ_DIR), $(OBJ))
 
-INCLUDE = -I./
+INCLUDE = -I./ 
 
 CXX=c++
 ###############################################################################
