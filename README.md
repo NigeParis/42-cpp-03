@@ -13,11 +13,6 @@ Your mission, should you choose to accept it, is to implement a class named `Cla
 ### Example:
 ```cpp
 class ClapTrap {
-private:
-    std::string name;
-    int hitPoints;
-    int energyPoints;
-    int attackDamage;
 
 public:
     ClapTrap(std::string n) : name(n), hitPoints(100), energyPoints(50), attackDamage(20) {
@@ -40,6 +35,13 @@ public:
         hitPoints += amount;
         std::cout << "ClapTrap " << name << " is repaired for " << amount << " hit points!" << std::endl;
     }
+
+    private:
+
+        std::string name;
+        int hitPoints;
+        int energyPoints;
+        int attackDamage;
 };
 
 
