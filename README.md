@@ -65,6 +65,10 @@ public:
     void attack(const std::string &target) {
         std::cout << "ScavTrap " << name << " fiercely attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
     }
+
+    void ScavTrap::guardGate(void) {
+    std::cout << "ScavTrap is now in Gate keeper mode" << std::endl;
+    };
 };
 
 ```
