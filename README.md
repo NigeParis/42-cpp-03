@@ -54,6 +54,7 @@ Time to introduce a new family member! Create a derived robot named `ScavTrap` t
 ### Example:
 ```cpp
 class ScavTrap : public ClapTrap {
+
 public:
     ScavTrap(std::string n) : ClapTrap(n) {
         std::cout << "ScavTrap " << name << " constructed." << std::endl;
@@ -86,6 +87,7 @@ Next up, expand the `ClapTrap` lineage with the `FragTrap` class. This class wil
 ```cpp
 
 class FragTrap : public ClapTrap {
+
 public:
     FragTrap(std::string n) : ClapTrap(n) {
         std::cout << "FragTrap " << name << " constructed." << std::endl;
@@ -132,7 +134,7 @@ public:
         FragTrap::attack(target);
     }
 
-private :
+private:
     std::string name_;
 };
 ```
