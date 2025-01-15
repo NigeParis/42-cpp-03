@@ -51,7 +51,7 @@ public:
 ## Exercise 01: Serena, my love!
 Time to introduce a new family member! Create a derived robot named `ScavTrap` that inherits from `ClapTrap`. Its constructors, destructor, and `attack()` will have their own unique flair to showcase individuality.
 
-###Example:
+### Example:
 ```cpp
 class ScavTrap : public ClapTrap {
 public:
