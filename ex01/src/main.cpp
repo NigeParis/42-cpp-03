@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 17:48:59 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/14 08:35:29 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int displayZeroIfEmpty(int nbr) {
         return (0);
     return nbr;
 }
-
 
 void displayAllVariables(ClapTrap &claptrap) {
 
@@ -35,7 +34,6 @@ void displayAllVariables(ClapTrap &claptrap) {
     std::cout << " | AttackDamage: " << claptrap.getAttackDamage() << std::endl;
     std::cout << RESET;
 }
-
 
 int main( void ) {
 

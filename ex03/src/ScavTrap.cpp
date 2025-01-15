@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 14:55:23 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 18:15:47 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/14 08:54:09 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ ScavTrap::~ScavTrap(void) {
     std::cout << "ScavTrap " << this->name_ << " Destructor is called" << std::endl;
 };
 
+// actions attack and guard gate
 void ScavTrap::guardGate(void) {
     
     std::cout << "ScavTrap is now in Gate keeper mode" << std::endl;

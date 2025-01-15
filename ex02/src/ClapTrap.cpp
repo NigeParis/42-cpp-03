@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 15:42:59 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 18:14:55 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/14 08:42:17 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ ClapTrap::ClapTrap(ClapTrap &claptrap) {
         this->damage_ = claptrap.getAttackDamage();
 };
 
-
 // copy assignement operator
 ClapTrap &ClapTrap::operator=(ClapTrap& claptrap) {
 
@@ -69,7 +68,7 @@ ClapTrap::~ClapTrap(void) {
 };
 
 
-// get private variables
+// get functions for private variables
 std::string ClapTrap::getName(void) const {
 
     return(this->name_);    
@@ -90,9 +89,7 @@ int ClapTrap::getAttackDamage(void) const {
     return(this->damage_);
 };
 
-
-
-
+// actions attack, repair and take damage
 void ClapTrap::takeDamage(unsigned int amount) {
     
     std::cout << RED;
@@ -110,7 +107,6 @@ void ClapTrap::takeDamage(unsigned int amount) {
     std::cout << RESET;
 };
 
-// actions
 void ClapTrap::attack(const std::string& target) {
  
     if (this->name_ == "default")
@@ -137,7 +133,6 @@ void ClapTrap::attack(const std::string& target) {
     }  
     std::cout << RESET; 
 };
-
 
 void ClapTrap::beRepaired(unsigned int amount) {
   

@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 12:28:51 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 18:18:44 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/14 08:46:57 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,7 @@ FragTrap::~FragTrap(void) {
     std::cout << "FragTrap " << this->name_ << " Destructor is called" << std::endl;
 };
 
-
-
+// actions attack and give me five
 void FragTrap::highFivesGuys(void) {
 
     std::cout << "FragTrap " << this->name_ << " Give me five guys ?" << std::endl;

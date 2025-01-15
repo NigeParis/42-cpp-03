@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 10:06:02 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 18:15:24 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/14 08:57:57 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name") {
     this->damage_ = 30;    
 };
 
-
 // copy constructor 
 DiamondTrap::DiamondTrap(DiamondTrap &diamondtrap) {
 
@@ -57,7 +56,6 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &diamondtrap) {
     return (*this);    
 };
 
-
 // destructor
 DiamondTrap::~DiamondTrap(void) {
 
@@ -65,12 +63,11 @@ DiamondTrap::~DiamondTrap(void) {
 };
 
 
-
-
+// actions attack and who am i
 void DiamondTrap::whoAmI(void) {
 
-   std::cout << "DiamondTrap name: " << name_ << " whoAmI()" <<std::endl;
-   std::cout << "ClapTrap    name: " << ClapTrap::name_ << " whoAmI()" << std::endl;
+   std::cout << "DiamondTrap name: " << name_ << "             whoAmI()" <<std::endl;
+   std::cout << "ClapTrap    name: " << ClapTrap::name_ << "   whoAmI()" << std::endl;
     
 };
 
@@ -95,11 +92,10 @@ void DiamondTrap::attack(const std::string& target) {
         }
 };
 
-
+// get Dia name
 std::string DiamondTrap::getDiaName(void) {
 
     return (this->name_);
-    
 };
 
 // call functions for main

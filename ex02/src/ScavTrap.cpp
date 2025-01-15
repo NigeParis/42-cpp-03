@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 14:55:23 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 18:14:04 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/14 08:40:15 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ ScavTrap::ScavTrap(ScavTrap &scavtrap) {
     this->damage_ = scavtrap.damage_;
 };
 
-
 // copy operator assignement 
 ScavTrap &ScavTrap::operator=(ScavTrap& scavtrap) {
 
@@ -54,7 +53,6 @@ ScavTrap &ScavTrap::operator=(ScavTrap& scavtrap) {
     }
     return (*this);
 };
-
 
 //destructor
 ScavTrap::~ScavTrap(void) {

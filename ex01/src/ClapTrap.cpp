@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 15:42:59 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 18:14:29 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/14 08:37:52 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,16 @@ ClapTrap::ClapTrap(std::string name) {
     this->damage_ = 0;
 };
 
+// copy constructor
+ClapTrap::ClapTrap(ClapTrap &claptrap) {
+
+    std::cout << "ClapTrap copy constructor is called" << std::endl;
+        this->name_ = claptrap.getName();
+        this->energy_ = claptrap.getEnergyPoints();
+        this->hitpoints_ = claptrap.getHitPoints();
+        this->damage_ = claptrap.getAttackDamage();
+};
+
 // copy assignement operator
 ClapTrap &ClapTrap::operator=(ClapTrap& claptrap) {
 
@@ -50,7 +60,6 @@ ClapTrap::~ClapTrap(void) {
     std::cout << "ClapTrap " << this->name_ << " Destructor is called" << std::endl;
     std::cout << RESET;
 };
-
 
 // get private variables
 std::string ClapTrap::getName(void) const {
@@ -73,9 +82,7 @@ int ClapTrap::getAttackDamage(void) const {
     return(this->damage_);
 };
 
-
-
-
+// actions attack. repair and take damage
 void ClapTrap::takeDamage(unsigned int amount) {
     
     std::cout << RED;
@@ -93,7 +100,6 @@ void ClapTrap::takeDamage(unsigned int amount) {
     std::cout << RESET;
 };
 
-// actions
 void ClapTrap::attack(const std::string& target) {
  
     std::cout << RED;
@@ -119,7 +125,6 @@ void ClapTrap::attack(const std::string& target) {
     }  
     std::cout << RESET; 
 };
-
 
 void ClapTrap::beRepaired(unsigned int amount) {
   

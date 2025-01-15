@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:06:58 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 09:38:08 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/14 08:45:45 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int displayZeroIfEmpty(int nbr) {
         return (0);
     return nbr;
 }
-
 
 void displayAllVariables(ClapTrap &claptrap) {
 
@@ -37,10 +36,9 @@ void displayAllVariables(ClapTrap &claptrap) {
     std::cout << RESET;
 }
 
-
 int main( void ) {
 
-    FragTrap fragnoname;
+    FragTrap fragnoname("FragNini");
     FragTrap fragname("FragName");
     FragTrap tocopyfrag("NewFrag");
     FragTrap newfrag;

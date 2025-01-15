@@ -6,7 +6,7 @@
 /*   By: nrobinso <nrobinso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 15:42:59 by nrobinso          #+#    #+#             */
-/*   Updated: 2025/01/13 18:13:21 by nrobinso         ###   ########.fr       */
+/*   Updated: 2025/01/14 08:34:03 by nrobinso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ ClapTrap &ClapTrap::operator=(ClapTrap& claptrap) {
     return (*this);
 };
 
-
 // destructor
 ClapTrap::~ClapTrap(void) {
     
@@ -67,7 +66,6 @@ ClapTrap::~ClapTrap(void) {
     std::cout << "ClapTrap " << this->name_ << " Destructor is called" << std::endl;
     std::cout << RESET;
 };
-
 
 // get private variables
 std::string ClapTrap::getName(void) const {
@@ -91,6 +89,7 @@ int ClapTrap::getAttackDamage(void) const {
 };
 
 
+// actions attack, repair and damage
 void ClapTrap::takeDamage(unsigned int amount) {
     
     std::cout << RED;
@@ -108,7 +107,6 @@ void ClapTrap::takeDamage(unsigned int amount) {
     std::cout << RESET;
 };
 
-// actions
 void ClapTrap::attack(const std::string& target) {
  
     std::cout << RED;
