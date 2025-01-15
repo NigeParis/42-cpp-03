@@ -104,10 +104,30 @@ public:
 ## Exercise 03: Now it’s weird!
 Get ready for the ultimate challenge: creating a `ClapTrap` that's half `FragTrap`, half `ScavTrap`. Meet `DiamondTrap`, a daring combination that inherits from both `FragTrap` and `ScavTrap`.
 
+### Example:
+```cpp
+class DiamondTrap : public FragTrap, public ScavTrap {
+private:
+    std::string diamondName;
+public:
+    DiamondTrap(std::string n) : ClapTrap(n), FragTrap(n), ScavTrap(n), diamondName(n) {
+        std::cout << "DiamondTrap " << diamondName << " constructed." << std::endl;
+    }
+    ~DiamondTrap() {
+        std::cout << "DiamondTrap " << diamondName << " destroyed." << std::endl;
+    }
+
+    void whoAmI() {
+        std::cout << "I am " << diamondName << " also known as " << ClapTrap::name << std::endl;
+    }
+
+    void attack(const std::string &target) {
+        FragTrap::attack(target);
+    }
+};
+```
+
 ### Key Points to Remember:
 - `DiamondTrap` should inherit constructors and destructors from both `FragTrap` and `ScavTrap`.
 - Combine features from both parent classes creatively.
 - Ensure it has unique identifiers and methods reflecting its dual heritage.
-
-Happy coding! Embrace the quirks and challenges of inheritance. Each exercise builds on the last, so make sure your foundation is strong and your implementations are inventive and robust.
-
