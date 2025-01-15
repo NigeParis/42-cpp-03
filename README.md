@@ -14,27 +14,29 @@ Your mission, should you choose to accept it, is to implement a class named `Cla
 ```cpp
 class ClapTrap {
 
-public:
-    ClapTrap(std::string n) : name(n), hitPoints(100), energyPoints(50), attackDamage(20) {
-        std::cout << "ClapTrap " << name << " constructed." << std::endl;
-    }
-    ~ClapTrap() {
-        std::cout << "ClapTrap " << name << " destroyed." << std::endl;
-    }
+    public:
 
-    void attack(const std::string &target) {
-        std::cout << "ClapTrap " << name << " attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
-    }
+        ClapTrap(std::string n) : name(n), hitPoints(100), energyPoints(50), attackDamage(20) {
+            std::cout << "ClapTrap " << name << " constructed." << std::endl;
+        }
 
-    void takeDamage(unsigned int amount) {
-        hitPoints -= amount;
-        std::cout << "ClapTrap " << name << " takes " << amount << " points of damage!" << std::endl;
-    }
+        ~ClapTrap() {
+            std::cout << "ClapTrap " << name << " destroyed." << std::endl;
+        }
 
-    void beRepaired(unsigned int amount) {
-        hitPoints += amount;
-        std::cout << "ClapTrap " << name << " is repaired for " << amount << " hit points!" << std::endl;
-    }
+        void attack(const std::string &target) {
+            std::cout << "ClapTrap " << name << " attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
+        }
+
+        void takeDamage(unsigned int amount) {
+            hitPoints -= amount;
+            std::cout << "ClapTrap " << name << " takes " << amount << " points of damage!" << std::endl;
+        }
+
+        void beRepaired(unsigned int amount) {
+            hitPoints += amount;
+            std::cout << "ClapTrap " << name << " is repaired for " << amount << " hit points!" << std::endl;
+        }
 
     private:
 
@@ -43,8 +45,6 @@ public:
         int energyPoints;
         int attackDamage;
 };
-
-
 ```
 
 
