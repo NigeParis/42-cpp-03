@@ -94,13 +94,9 @@ public:
         std::cout << "FragTrap " << name << " powerfully attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
     }
 
-
-void FragTrap::highFivesGuys(void) {
-
-    std::cout << "FragTrap " << this->name_ << " Give me five guys ?" << std::endl;
-    
-};
-
+    void FragTrap::highFivesGuys(void) {
+        std::cout << "FragTrap " << this->name_ << " Give me five guys ?" << std::endl;
+    };
 };
 ```
 
