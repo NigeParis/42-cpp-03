@@ -10,6 +10,42 @@ Your mission, should you choose to accept it, is to implement a class named `Cla
 - Define essential attributes like `name`, `hitPoints`, `energyPoints`, and `attackDamage`.
 - Add member functions for `attack()`, `takeDamage()`, and `beRepaired()`.
 
+### Example:
+```cpp
+class ClapTrap {
+private:
+    std::string name;
+    int hitPoints;
+    int energyPoints;
+    int attackDamage;
+
+public:
+    ClapTrap(std::string n) : name(n), hitPoints(100), energyPoints(50), attackDamage(20) {
+        std::cout << "ClapTrap " << name << " constructed." << std::endl;
+    }
+    ~ClapTrap() {
+        std::cout << "ClapTrap " << name << " destroyed." << std::endl;
+    }
+
+    void attack(const std::string &target) {
+        std::cout << "ClapTrap " << name << " attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
+    }
+
+    void takeDamage(unsigned int amount) {
+        hitPoints -= amount;
+        std::cout << "ClapTrap " << name << " takes " << amount << " points of damage!" << std::endl;
+    }
+
+    void beRepaired(unsigned int amount) {
+        hitPoints += amount;
+        std::cout << "ClapTrap " << name << " is repaired for " << amount << " hit points!" << std::endl;
+    }
+};
+
+
+```
+
+
 ## Exercise 01: Serena, my love!
 Time to introduce a new family member! Create a derived robot named `ScavTrap` that inherits from `ClapTrap`. Its constructors, destructor, and `attack()` will have their own unique flair to showcase individuality.
 
